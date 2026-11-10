@@ -1,0 +1,37 @@
+# =============================================================
+# spec2flow 忽略规则
+# 原则：只忽略"可再生的垃圾 / 本机临时物"，**不忽略任何配置文件**——
+#   .opencode/（项目技能与配置）、AGENTS.md、README.md、docs/ 全部入库。
+# =============================================================
+
+# ---------- Python（gen-*.py / check-diagram.py 运行产物） ----------
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+
+# ---------- 操作系统杂项 ----------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---------- 编辑器 / 工具的临时交换文件（不是配置） ----------
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.orig
+\#*\#
+.\#*
+
+# ---------- 运行日志 ----------
+*.log
+logs/
